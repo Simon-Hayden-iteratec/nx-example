@@ -21,6 +21,13 @@
   "projects": {
     "nest-example": {
       "tags": []
+    },
+    "react-example": {
+      "tags": []
+    },
+    "react-example-e2e": {
+      "tags": [],
+      "implicitDependencies": ["react-example"]
     }
   }
 }
