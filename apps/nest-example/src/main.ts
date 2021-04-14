@@ -20,8 +20,8 @@ async function bootstrap() {
 
   // Setup swagger-ui
   const config = new DocumentBuilder()
-    .setTitle('Cats example')
-    .setDescription('The cats API description')
+    .setTitle('Message example')
+    .setDescription('The message API description')
     .setVersion('1.0')
     // Don't forget to use the globalPrefix, otherwise routes are incorrect
     .setBasePath(globalPrefix)
