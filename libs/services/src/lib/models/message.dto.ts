@@ -11,8 +11,9 @@ export enum MessageTypes {
  */
 export class MessageDTO {
   // The message to transfer
-  @IsNotEmpty()
+  @IsNotEmpty({})
   message: string;
 
+  @IsEnum(MessageTypes)
   type: MessageTypes = MessageTypes.MOTD;
 }

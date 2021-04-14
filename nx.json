@@ -1,33 +1,23 @@
 {
   "implicitDependencies": {
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     ".eslintrc.json": "*"
   },
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "npmScope": "nx-example",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
-      }
+      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
     }
   },
   "projects": {
-    "nest-example": {
-      "tags": []
-    },
-    "react-example": {
-      "tags": []
-    },
+    "nest-example": { "tags": [] },
+    "react-example": { "tags": [] },
     "react-example-e2e": {
       "tags": [],
       "implicitDependencies": ["react-example"]
-    }
+    },
+    "services": { "tags": [] }
   }
 }

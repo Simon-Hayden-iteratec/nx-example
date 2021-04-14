@@ -1,9 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { MessageDTO, MessageTypes } from './models/message.dto';
+import { MessageDTO, MessageTypes } from '@nx-example/services';
 
 @Injectable()
-export class AppService {
-
+export class MessageService {
   private dto: MessageDTO = new MessageDTO();
 
   constructor() {

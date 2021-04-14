@@ -28,12 +28,16 @@
       "targets": {
         "build": {
           "executor": "@nrwl/node:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/nest-example",
             "main": "apps/nest-example/src/main.ts",
             "tsConfig": "apps/nest-example/tsconfig.app.json",
-            "assets": ["apps/nest-example/src/assets"],
+            "assets": [
+              "apps/nest-example/src/assets"
+            ],
             "webpackConfig": "apps/nest-example/webpack.config.js"
           },
           "configurations": {
@@ -59,12 +63,16 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/nest-example/**/*.ts"]
+            "lintFilePatterns": [
+              "apps/nest-example/**/*.ts"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/nest-example"],
+          "outputs": [
+            "coverage/apps/nest-example"
+          ],
           "options": {
             "jestConfig": "apps/nest-example/jest.config.js",
             "passWithNoTests": true
@@ -79,7 +87,9 @@
       "targets": {
         "build": {
           "executor": "@nrwl/web:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/react-example",
             "index": "apps/react-example/src/index.html",
@@ -90,7 +100,9 @@
               "apps/react-example/src/favicon.ico",
               "apps/react-example/src/assets"
             ],
-            "styles": ["apps/react-example/src/styles.scss"],
+            "styles": [
+              "apps/react-example/src/styles.scss"
+            ],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -133,12 +145,16 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/react-example/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "apps/react-example/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/react-example"],
+          "outputs": [
+            "coverage/apps/react-example"
+          ],
           "options": {
             "jestConfig": "apps/react-example/jest.config.js",
             "passWithNoTests": true
@@ -167,7 +183,34 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/react-example-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/react-example-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
+    "services": {
+      "root": "libs/services",
+      "sourceRoot": "libs/services/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/services/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/services"
+          ],
+          "options": {
+            "jestConfig": "libs/services/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

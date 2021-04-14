@@ -1,13 +1,12 @@
 import { Body, Controller, Get, Put } from '@nestjs/common';
 
-import { AppService } from './app.service';
-import { MessageDTO } from './models/message.dto';
+import { MessageDTO, MessageService } from '@nx-example/services';
 
 @Controller({
   path: 'message',
 })
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly messageService: MessageService) {}
 
   /**
    * Route for fetching the current message.
@@ -15,8 +14,8 @@ export class AppController {
    * @returns The current message.
    */
   @Get()
-  getData(): MessageDTO {
-    return this.appService.getData();
+  getMessage(): MessageDTO {
+    return this.messageService.getData();
   }
 
   /**
@@ -26,7 +25,7 @@ export class AppController {
    * @returns The updated message.
    */
   @Put()
-  update(@Body() newMessage: MessageDTO) {
-    return this.appService.updateData(newMessage);
+  updateMessage(@Body() newMessage: MessageDTO) {
+    return this.messageService.updateData(newMessage);
   }
 }
