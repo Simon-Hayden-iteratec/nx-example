@@ -1,15 +1,15 @@
+
 import { Module } from '@nestjs/common';
 import { ServicesModule } from '@nx-example/services';
-
-import { AppController } from './app.controller';
+import { MessageController } from './routes/message/message.controller';
 
 @Module({
   imports: [
     ServicesModule,
   ],
   controllers: [
-    AppController
+    MessageController,
   ],
   providers: [],
 })
-export class AppModule {}
+export class AppModule { }
