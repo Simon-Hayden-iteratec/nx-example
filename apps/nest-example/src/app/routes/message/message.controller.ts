@@ -1,11 +1,10 @@
 import { Body, Controller, Get, Put } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { MessageService, MessageDTO } from '@nx-example/services';
-import { docTag, path } from './path';
 
-@ApiTags(docTag)
+@ApiTags('Message')
 @Controller({
-  path,
+  path: ['message'],
 })
 export class MessageController {
   constructor(
