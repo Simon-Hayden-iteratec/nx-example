@@ -23,8 +23,6 @@ async function bootstrap() {
     .setTitle('Message example')
     .setDescription('The message API description')
     .setVersion('1.0')
-    // Don't forget to use the globalPrefix, otherwise routes are incorrect
-    .setBasePath(globalPrefix)
     .build();
   const document = SwaggerModule.createDocument(app, config);
   // Swagger should be reachable via /api/docs
