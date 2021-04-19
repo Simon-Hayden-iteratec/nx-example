@@ -1,6 +1,21 @@
-
-
 # NxExample
+
+This is a very simple project showcasing NestJS. Inside the `apps` folder you
+will find a simple `nest-example`. You can start it using `npm start` (or `npm
+start -- <project-name>` for other projects.)
+
+I also generated a library, simply called `services`. If you need to import
+something from them, just import `@nx-example/service` (`nx`'s generated meta
+data handles most of the heavy lifting in making it that easy.)
+
+If you want to know more, please have a look at the official docs:
+- https://nx.dev/latest/react/getting-started/intro
+- https://docs.nestjs.com/
+
+
+Here, the remainder of the generated `README.md`.
+
+-------------
 
 This project was generated using [Nx](https://nx.dev).
 
