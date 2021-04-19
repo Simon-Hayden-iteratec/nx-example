@@ -3,12 +3,10 @@ import { MessageDTO, MessageTypes } from '@nx-example/services';
 
 @Injectable()
 export class MessageService {
-  private dto: MessageDTO = new MessageDTO();
-
-  constructor() {
-    this.dto.message = 'Welcome to nest-example!';
-    this.dto.type = MessageTypes.MOTD;
-  }
+  private dto: MessageDTO = MessageDTO.createMessage(
+    'Welcome to nest-example!',
+    MessageTypes.MOTD,
+  );
 
   getData(): MessageDTO {
     return this.dto;
